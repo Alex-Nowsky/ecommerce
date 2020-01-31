@@ -1,32 +1,89 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?dr44yh');
+    src:  url('../fonts/icomoon.eot?dr44yh#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?dr44yh') format('truetype'),
+      url('../fonts/icomoon.woff?dr44yh') format('woff'),
+      url('../fonts/icomoon.svg?dr44yh#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-twitter:before {
+    content: "\e904";
+  }
+  .icon-github:before {
+    content: "\e900";
+  }
+  .icon-facebook:before {
+    content: "\e902";
+  }
+  .icon-instagram:before {
+    content: "\e901";
+  }
+  .icon-menu:before {
+    content: "\e903";
+  }
+  
 body{
 	background-color: #2A2A2A;
 	margin: 0;
 }
-nav{
-	overflow: hidden;
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #3d78f7;
 }
+.logo {
+	display: flex;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
 .nav{
 	display: flex;
 	justify-content: space-between;
+	/* align-items: flex-end; */
+	/* flex-direction: column-reverse; */
 	background-color: rgba(0,0,0,0);
-
+	border: 2px solid black;
+	margin-right: 5px;
+	border-radius: 5px;
 }
-.nav h3{
-	float: left;
-	color: #00FF70;
-	font-family: 'Righteous', cursive;
-	display: inline!important;
+.nav ul{
+	display: flex;
+	justify-content: space-between;
+	margin-right: 50px;
+	/* width: 30%; */
+	/* font-size: 20px; */
 }
 .nav li{
-	display: inline;
+	display: flex;
 	color: white;
 	font-family: 'Righteous', cursive;
 	margin-left: 1%;
 	margin-right: 2%;
+	filter:brightness(0.7)
 }
-.nav ul{
-	width: 30%;
-	/* font-size: 20px; */
+.nav li:hover{
+	filter:brightness(1)
 }
 .nav a {
 	text-decoration: none;
@@ -39,11 +96,14 @@ nav{
 .container {
 	padding: 15px;
 	height: 460px;
+	background: rgb(24, 23, 23);
+	padding-bottom: 3%;
 }
 .articulo{
 	margin-top: 2%;
 	margin-right: 1%;
 	margin-left: 1%;
+	/* margin-bottom: 2%; */
 	float: left;
 	width: 31%;
 	height: 200px;
@@ -53,7 +113,7 @@ nav{
 	width: 80%;
 	height: 70%;
 	margin: 0 auto;
-	background: #2A2A2A;
+	background: rgb(24, 23, 23);
 }
 .img-ilustrativo {
 	object-fit: cover;
@@ -63,11 +123,10 @@ nav{
 	/* border: 1px solid #00FF70; */
 	filter:brightness(0.7)
 }
- .img-ilustrativo:hover{
+ .img-ilustrativo:hover {
 	width: 120%;
 	height: 120%;
-	filter:brightness(1)
-	
+	filter:brightness(1);
 }
 .descripcion{
 	text-align: center;
@@ -78,10 +137,13 @@ nav{
 	padding-top: 10px;
 }
 .contac {
-	margin: 10px 0 ;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 ;
 	width: 100%;
 	height: 150px;
-	background-color: #056fff;
+	background-color: #061e3f;
 	
 } 
 .form-email {
@@ -118,7 +180,21 @@ nav{
     width: 100px;
     margin-top: 10px
 }
-
+.social-link {
+	display: inline-flex;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
 @media screen and (max-width: 1023px) {
 
 } 
